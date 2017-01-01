@@ -13,14 +13,27 @@
 <body>
   <div class="container-fluid">
     <header>
-      <nav>
-        logo
-        Flights
-        Hotels
-        Guides
-        Popular
-        <img src="#" alt="magnifying glass">
-        <input type="text" name="search field" placeholder="SEARCH">     
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">LogoFlights</a>
+          </div>
+          
+          <div class="collapse navbar-collapse" id="mynavbar-content">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Flights</a></li>
+              <li><a href="#">Hotels</a></li>
+              <li><a href="#">Guides</a></li>
+              <li><a href="#">Popular</a></li>
+            </ul>
+            <input type="text" name="search" placeholder="SEARCH">
+          </div>
+        </div>
       </nav>
       
       <section class="wrapper">
@@ -28,30 +41,49 @@
       </section>
     </header>
 
+
+
+<!-- - - - - - - - - - - - MAIN - - - - - - - - - - - -->
+
     <main>
-      <section>
-        <h2>Find the cheapest flights</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <div>icon</div>
-        <div>icon</div>
-        <div>icon</div>
+      <section class="reservationPane">
+        <div>
+          <input type="text" name="current city" placeholder="Current City">
+          <input type="text" name="destination city" placeholder="Destination">
+          <input type="date" name="date start">
+          <input type="date" name="date end">
+          <input type="number" name="number of people" placeholder="2">
+          <div></div>
+        </div>
       </section>
 
-      <div><h2>pasek fioletowy wzorek</h2></div>
-
       <section>
-        <h2>Popular destinations</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <div>destinations gallery</div>
-        <div>destinations gallery</div>
-        <div>destinations gallery</div>
-        <div>destinations gallery</div>
-        <div>destinations gallery</div>
-        <div>destinations gallery</div>
-        <button>VIEW MORE</button>
+        <div class="wrapper">
+          <h2>Find the cheapest flights</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <div>icon</div>
+          <div>icon</div>
+          <div>icon</div>
+        </div>
       </section>
 
-      <div><h2>pasek fioletowy wzorek</h2></div>
+      <div class="violetBar"></div>
+
+      <section>
+        <div class="wrapper">
+          <h2>Popular destinations</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div>destinations gallery</div>
+          <div>destinations gallery</div>
+          <div>destinations gallery</div>
+          <div>destinations gallery</div>
+          <div>destinations gallery</div>
+          <div>destinations gallery</div>
+          <button>VIEW MORE</button>
+        </div>
+      </section>
+
+      <div class="violetBar"></div>
 
       <section>
         <h2>Hear our customers’ thoughts </h2>
@@ -69,8 +101,12 @@
     </main>
 
 
+<!-- - - - - - - - - - - - FOOTER - - - - - - - - - - - -->
+
     <footer>
-      <div><h2>pasek fioletowy wzorek</h2><img src="#" alt="author sign"></div>
+      <div class="violetBar">
+        <img src="images/authorSign.png" alt="logo - author sign">
+      </div>
     </footer>
 
 
