@@ -9,7 +9,7 @@ $violetItems: #69157a;
 
 $baseFontSize: 14;
 @function fontSize($itemSize) {
-  @return (($itemSize/$baseFontSize)*1.4)+rem; //original (from psd) base paragraph font was 10px. Therefore, bearing in mind user friendliness, it was changed to 14px (40%);
+  @return (($itemSize/$baseFontSize)*1.4)+rem; //original (from psd) base paragraph font was 10px. To be more user friendly, it was changed to 14px (40%);
 }
 
 
@@ -113,9 +113,32 @@ header {
 
 .navbar {
   background-color: rgba(255,255,255,.98);
+  .container-fluid {
+  width: 80%;
+  float: left;
+  }
   input {
     display: inline-block;
     float: right;
+  }
+}
+
+.nav {
+  li {
+    font-family: $robotoFont;
+    font-weight: 400;
+    &:nth-of-type(1)>a {
+      color: #60206d;
+    }  
+  }
+}
+
+.navbar-brand {
+  img {
+    height: 30px;
+    width: auto;
+    margin-left: 10px;
+    margin-top: -5px;
   }
 }
 
@@ -183,16 +206,25 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  img {
-    width: 210px;
-    margin: auto;
-  }
   figure {
     margin-bottom: 100px;
     cursor: pointer;
+    position: relative;
     &:nth-of-type(3n+2), &:nth-of-type(3n+3) {
     margin-left: 90px;
-    }  
+    } 
+    img {
+      width: 210px;
+      margin: auto;
+    }
+    >img:nth-of-type(2) {
+      z-index: 999;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      width: 150px;
+      max-height: 150px;
+    }
   }
   
   figcaption {
@@ -217,6 +249,7 @@ main {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40px;
   span {
     font-size: 40px;
     color: $violetItems;
@@ -227,6 +260,97 @@ main {
     border-bottom: 2px solid $violetItems;
     height: 1px;
     flex-basis: 40%;
+  }
+}
+
+.slider{
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  >div {
+    display: inline-block;
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+  >div:nth-of-type(2) {
+    flex-basis: 30%;
+    box-shadow: 0 0 40px rgba(100,100,100,.6);
+    z-index: 5;
+  }
+  >div:nth-of-type(1), >div:nth-of-type(3) {
+    flex-basis: 40%;
+    border: solid white;
+  } 
+  >div:nth-of-type(1) {
+    border-width: 40px 40px 40px 0;
+  }
+  >div:nth-of-type(3) {
+    border-width: 40px 0 40px 40px;
+  }
+}
+
+#caption {
+  position: absolute;
+  bottom: 0;
+  padding: 40px;
+  width: 100%;
+  img {
+    width: 30%;
+    margin: auto;
+    position: relative;
+    top: 60px;
+  }
+  #txtFrame{
+    background-color: white;
+    padding: 40px 20px 10px 20px;
+    p {
+      max-height: 4.5em;
+      width: 100%;
+      overflow: hidden; //if overlow will be put on div it will ignore bottom pdding!
+      &:nth-of-type(2) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.quoteMark{
+  font-family: $hFont;
+  font-size: fontSize(32);
+  line-height: 2.5rem;
+  padding-top: 20px;
+  display: block;
+  color: #787878;
+  &:nth-of-type(1){
+    text-align: left;
+    
+  }
+  &:nth-of-type(3){
+    text-align: right;
+  }
+}
+
+.customersSay {
+  .wrapper:nth-of-type(3) {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    .quoteMark {
+      font-size: fontSize(54);
+      color: $violetItems;
+      text-align: center;
+    }
+    h3{
+      font-family: $hFont;
+      font-size: fontSize(36);
+      color: #9f9e9e;
+      text-align: center;
+      padding-bottom: 100px;
+    }
   }
 }
 
