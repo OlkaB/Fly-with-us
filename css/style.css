@@ -20,6 +20,7 @@ body {
 .wrapper {
   margin: auto;
   width: 77%;
+  max-width: 980px;
 }
 
 h1 {
@@ -28,10 +29,18 @@ h1 {
   font-size: 5.244rem;
 }
 
+h2, p, .optionsPic {
+  width: 70%;
+  margin: auto;
+}
+
 h2 {
   color: #323232;
   font-family: "Playfair Display", serif;
   font-size: 3.2rem;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
 }
 
 p {
@@ -39,6 +48,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-weight: light;
   font-size: 1rem;
+  text-align: justify;
 }
 
 .violetBar {
@@ -63,7 +73,7 @@ header .wrapper {
 }
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.985);
+  background-color: rgba(255, 255, 255, 0.98);
 }
 .navbar input {
   display: inline-block;
@@ -81,7 +91,7 @@ main {
 }
 .reservationPane > div {
   width: 80%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.7);
   min-height: 100px;
   margin: auto;
   background-color: #500e5e;
@@ -89,6 +99,52 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.optionsPic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.optionsPic > a:nth-of-type(2) > img, .optionsPic > a:nth-of-type(3) > img {
+  margin-left: 50px;
+}
+.optionsPic > a > img {
+  width: 100px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  transition: all .5s ease-in-out;
+}
+.optionsPic > a > img:hover {
+  transform: scale(1.1);
+}
+.optionsPic > a > img:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+.optionsPic > a > img:nth-of-type(2) {
+  padding-left: 40px;
+  border: 1px solid red;
+}
+
+.destinationsGallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.destinationsGallery img {
+  width: 210px;
+  margin: auto;
+}
+.destinationsGallery figure:nth-of-type(3n+2), .destinationsGallery figure:nth-of-type(3n+3) {
+  margin-left: 90px;
+}
+.destinationsGallery figcaption {
+  font-weight: 800;
+  text-align: center;
+  color: #585858;
 }
 
 footer > .violetBar {
