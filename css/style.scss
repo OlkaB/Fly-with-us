@@ -201,7 +201,7 @@ main {
   margin-bottom: 120px;
 }
 
-.destinationsGallery {
+#destinationsGallery {
   margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
@@ -234,14 +234,61 @@ main {
     }
 }
 
-.cityDescrScreen {
-  display: hidden;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
+#popUpWind {
+  position: fixed;
+  top: 0;
+  bottom: 0;
   left: 0;
-  background-color: rgba(0,0,0,.5);
+  right: 0;
+  z-index: 1999;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  visibility: hidden;
 }
+
+#cityInfoCard {
+  width: 90%;
+  height: 70%;
+  background: #ebebeb;
+  margin: auto;
+  position: relative;
+  top: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: stretch;
+}
+
+#closeModalXBttn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #500e5e;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 50px;
+  color: white;
+  top: -25px;
+  right: -25px;
+  cursor: pointer;
+}
+
+#cityPicture, #cityDescr {
+  flex-basis: 50%;
+  height: 100%;
+}
+
+#cityPicture{
+  background: pink;
+}
+
+#cityDescr {
+  background: white;
+  padding: 10px;  
+}
+
 
 .separator {
   @extend %wrapperContent;
