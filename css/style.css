@@ -225,7 +225,7 @@ main {
   margin: auto;
   position: relative;
   top: 20px;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   align-items: stretch;
 }
@@ -257,7 +257,47 @@ main {
 
 #cityDescr {
   background: white;
-  padding: 10px;
+  padding: 20px 20px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+#cityDescr h3 {
+  color: black;
+  font-size: 3.2rem;
+  font-family: "Playfair Display", serif;
+  margin-top: 0px;
+  text-align: left;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+#cityDescr p {
+  color: #787878;
+  text-align: left;
+  margin: 20px 0 40px 0;
+  line-height: 200%;
+  overflow-y: auto;
+  width: 100%;
+}
+#cityDescr button {
+  width: 160px;
+  height: 50px;
+  border: 1.5px solid #69157a;
+  color: #69157a;
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+  background-color: white;
+  outline: none;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-self: flex-end;
+}
+#cityDescr button:hover {
+  background-color: #f2f2f2;
+}
+#cityDescr button:active {
+  box-shadow: inset 2px 2px 5px rgba(100, 100, 100, 0.6), 2px 2px 5px rgba(100, 100, 100, 0.6);
 }
 
 .separator {
